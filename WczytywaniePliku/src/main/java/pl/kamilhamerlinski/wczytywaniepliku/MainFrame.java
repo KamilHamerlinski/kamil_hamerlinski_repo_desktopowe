@@ -4,6 +4,7 @@
  */
 package pl.kamilhamerlinski.wczytywaniepliku;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -22,6 +23,7 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+        f = new File("text.txt");
     }
 
     /**
@@ -54,8 +56,6 @@ public class MainFrame extends javax.swing.JFrame {
                 jReadButtonActionPerformed(evt);
             }
         });
-
-        jTADataToStore.setText("jTextField1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -157,6 +157,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
+    File f;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
