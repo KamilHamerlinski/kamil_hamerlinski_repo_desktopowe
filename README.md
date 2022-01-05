@@ -1,0 +1,1 @@
+# kamil_hamerlinski_repo_desktopowe
