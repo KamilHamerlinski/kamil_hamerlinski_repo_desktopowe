@@ -14,6 +14,6 @@ class Question{
         this.answers[2] = c;
         this.answers[3] = d;
         this.goodAnswer = g;
-        this.goodAnswerI = gi;    
+        this.goodAnswerI = gi;
     }
 }
