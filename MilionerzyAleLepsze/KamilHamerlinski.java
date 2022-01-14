@@ -47,7 +47,7 @@ class KamilHamerlinski{
             System.out.println("KONIEC");
         }
         else{
-            if(numberOfHints < 3){ //podpowiedź
+            if(numberOfHints < 2){ //podpowiedź
                 numberOfHints++;
                 getHint();
             }
