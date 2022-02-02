@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Arrays;
 public class SortowanieTablic{
     public static void main(String[] args){
         final int iloscElementow = 1000;
@@ -8,6 +9,7 @@ public class SortowanieTablic{
         for(int i = 0; i < iloscElementow; i++){
             tab[i] = r.nextInt(10000) + 1;
         }
+        int[] tabQuick = tab;
         System.out.println("Teraz sortowanie");
         long millisActualTime = System.currentTimeMillis();
         for(int i = 0; i < tab.length; i++){
@@ -16,11 +18,21 @@ public class SortowanieTablic{
                     int wieksza = tab[j - 1];
                     tab[j - 1] = tab[j];
                     tab[j] = wieksza;
-                    System.out.println(tab[j]);
                 }
             }
         }
+        for (int i : tab) {
+            System.out.println(i);
+        }
         long executionTime = System.currentTimeMillis() - millisActualTime;
-        System.out.println("Proces sortownia trwał: " + executionTime);
+        System.out.println("Proces sortownia i wypisania trwał: " + executionTime);
+        //sortowanie drugie
+        millisActualTime = System.currentTimeMillis();
+        Arrays.sort(tabQuick);
+        for (int i : tabQuick) {
+            System.out.println(i);
+        }
+        executionTime = System.currentTimeMillis() - millisActualTime;
+        System.out.println("Proces sortownia i wypisania trwał: " + executionTime);
     }
 }
