@@ -21,7 +21,6 @@ class KamilHamerlinski{
     public static void getQuestion(){ //pobieranie nowej pytania
         Random r = new Random();
         currentQuestionNumber = r.nextInt(100);
-        currentQuestionNumber = 0;
         endOfQuestion = false;
         if(question[currentQuestionNumber].isUsed){
             getQuestion();
