@@ -20,7 +20,7 @@ class KamilHamerlinski{
 
     public static void getQuestion(){ //pobieranie nowej pytania
         Random r = new Random();
-        currentQuestionNumber = r.nextInt(100);
+        //DcurrentQuestionNumber = r.nextInt(100);
         endOfQuestion = false;
         if(question[currentQuestionNumber].isUsed){
             getQuestion();
@@ -95,6 +95,10 @@ class KamilHamerlinski{
     }
 
     public static void questionManagment(){
-        question[0] = new Question("Pytanie test", 5, "Tak", "Nie", "Może", "On nie wiedział", "D", 3);
+        question[0] = new Question("Gdzie noworodki mają niezrośniętą kość", 3, "W ręce", "W kręgosłupie", "Mają wszystkie kości zrośnięte", "W czaszce", "D", 4);
+        question[1] = new Question("Ulubioną piosenką Hirohiko Arakiego do randke jest", 6, "Shine on your, Crazy Diamond", "Amerika", "GOMBAO 33", "Nothing Else Matters", "A", 1);
+        question[2] = new Question("Obraz Dom nad jeziorem z górami został namalowany przez", 9, "Adama Mickiewicza", "Filipa Szcześniaka", "Adolfa Hitlera", "Leonardo DiCaprio", "C", 3);
+        question[3] = new Question("Rekorda Suma w Polsce wynosi", 3, "261 cm", "260 cm", "198 cm", "197 cm", "A", 1);
+        question[4] = new Question("Wiedźmin, pierwszy raz został wydany jako", 3, "261 cm", "260 cm", "198 cm", "197 cm", "A", 1);
     }
 }
