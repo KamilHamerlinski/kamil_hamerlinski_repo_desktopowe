@@ -99,6 +99,7 @@ class KamilHamerlinski{
         question[1] = new Question("Ulubioną piosenką Hirohiko Arakiego do randke jest", 6, "Shine on your, Crazy Diamond", "Amerika", "GOMBAO 33", "Nothing Else Matters", "A", 1);
         question[2] = new Question("Obraz Dom nad jeziorem z górami został namalowany przez", 9, "Adama Mickiewicza", "Filipa Szcześniaka", "Adolfa Hitlera", "Leonardo DiCaprio", "C", 3);
         question[3] = new Question("Rekorda Suma w Polsce wynosi", 3, "261 cm", "260 cm", "198 cm", "197 cm", "A", 1);
-        question[4] = new Question("Wiedźmin, pierwszy raz został wydany jako", 3, "261 cm", "260 cm", "198 cm", "197 cm", "A", 1);
+        question[4] = new Question("Wiedźmin, pierwszy raz został wydany jako", 6, "Gra", "Film", "Opowiadanie", "Książka", "C", 3);
+        question[5] = new Question("Wiedźmin, pierwszy raz został wydany jako", 6, "Gra", "Film", "Opowiadanie", "Książka", "C", 3);
     }
 }
