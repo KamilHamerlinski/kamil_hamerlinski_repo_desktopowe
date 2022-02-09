@@ -1,5 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 
 class KamilHamerlinski{
     public static Question[] question = new Question[100];
@@ -13,14 +16,15 @@ class KamilHamerlinski{
 
     public static void main(String[] args) {
         questionManagment();
-        for(int x = 0; x < 10; x++){
-            questionPicking();
-        }
+        //for(int x = 0; x < 10; x++){
+        //    questionPicking();
+        //}
     }
 
     public static void getQuestion(){ //pobieranie nowej pytania
         Random r = new Random();
-        //DcurrentQuestionNumber = r.nextInt(100);
+        //currentQuestionNumber = r.nextInt(100);
+        currentQuestionNumber = 0;
         endOfQuestion = false;
         if(question[currentQuestionNumber].isUsed){
             getQuestion();
@@ -95,11 +99,13 @@ class KamilHamerlinski{
     }
 
     public static void questionManagment(){
-        question[0] = new Question("Gdzie noworodki mają niezrośniętą kość", 3, "W ręce", "W kręgosłupie", "Mają wszystkie kości zrośnięte", "W czaszce", "D", 4);
-        question[1] = new Question("Ulubioną piosenką Hirohiko Arakiego do randke jest", 6, "Shine on your, Crazy Diamond", "Amerika", "GOMBAO 33", "Nothing Else Matters", "A", 1);
-        question[2] = new Question("Obraz Dom nad jeziorem z górami został namalowany przez", 9, "Adama Mickiewicza", "Filipa Szcześniaka", "Adolfa Hitlera", "Leonardo DiCaprio", "C", 3);
-        question[3] = new Question("Rekorda Suma w Polsce wynosi", 3, "261 cm", "260 cm", "198 cm", "197 cm", "A", 1);
-        question[4] = new Question("Wiedźmin, pierwszy raz został wydany jako", 6, "Gra", "Film", "Opowiadanie", "Książka", "C", 3);
-        question[5] = new Question("Wiedźmin, pierwszy raz został wydany jako", 6, "Gra", "Film", "Opowiadanie", "Książka", "C", 3);
+        File file = new File("pytania.txt");
+        Scanner scFile = new Scanner(file);
+        int x = 0;
+        while(scFile.hasNext()){
+            String rawLine = scFile.nextLine();
+            String[] line = rawLine.split("; ");
+            question[x] = new Question(line[0], Integer.parseInt(line[1]), line[2], line[3], line[4], line[5], line[6], Integer.parseInt(line[7]));
+        }
     }
 }
